@@ -4,8 +4,18 @@
 
   <% @pets.each do |pet| %>
     <li>
-      <%= pet.name %> <small>( <%= pet.species %> )</small> , <%= pet.contact %>
+      <%= link_to pet_path(pet.id) do %>
+        <%= pet.name %> <small>( <%= pet.species %> )</small> , <%= pet.contact %>
+      <% end %>
+      <%= link_to '❌',
+                  pet_path(pet.id),
+                  method: 'delete',
+                  data: {
+                    confirm: 'Are you sure you want to delete this pet?'
+                  } %>
     </li>
   <% end %>
 
 </ul>
+
+<%= link_to 'Report a found pet', new_pet_path %>

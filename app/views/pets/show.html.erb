@@ -1,0 +1,16 @@
+<h2> <%= @pet.name %> <small> ( <%= @pet.species %> ) </small> </h2>
+
+<p>
+  This pet was found on <%= @pet.address %>
+  ( <%= @pet.created_at.day %>/ <%= @pet.created_at.month %> / <%= @pet.created_at.year %> )
+</p>
+
+<p>
+  Please contact me at <%= @pet.contact %> so that I can return it.
+</p>
+
+<p>
+  <%= link_to 'Go Back', root_path %> |
+  <%= link_to 'Edit this pet', edit_pet_path(@pet.id) %>
+
+</p>
