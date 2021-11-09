@@ -1,11 +1,5 @@
 <div class="container">
   <h2> Edit <%= @pet.name %> </h2>
 
-  <%= simple_form_for @pet do |f| %>
-    <%= f.input :name %>
-    <%= f.input :species %>
-    <%= f.input :address %>
-    <%= f.input :contact %>
-    <%= f.submit 'Edit the pet', class: 'btn btn-primary' %>
-  <% end %>
+  <%= render 'form', pet: @pet %>
 </div>

@@ -1,0 +1,11 @@
+  <%= simple_form_for @pet do |f| %>
+    <%= f.input :name %>
+    <%= f.input :species %>
+    <%= f.input :address %>
+    <%= f.input :contact %>
+    <% if @pet.persisted? %>
+      <%= f.submit 'Edit the pet', class: 'btn btn-primary' %>
+    <% else %>
+      <%= f.submit 'Register a pet', class: 'btn btn-primary' %>
+    <% end %>
+  <% end %>
