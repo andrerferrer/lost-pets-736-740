@@ -1,0 +1,11 @@
+<h1>Lost Pets here!</h1>
+
+<ul>
+
+  <% @pets.each do |pet| %>
+    <li>
+      <%= pet.name %> <small>( <%= pet.species %> )</small> , <%= pet.contact %>
+    </li>
+  <% end %>
+
+</ul>
